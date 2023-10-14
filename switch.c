@@ -14,37 +14,37 @@ int selector(const char *format, va_list args, int printed)
     {
         case 'd':
         case 'i':
-            printed = print_integer(args, printed);
+            printed = printf_integer(args, printed);
             break;
         case 'c':
             _putchar(va_arg(args, int));
             printed++;
             break;
         case 's':
-            printed = print_string(args, printed);
+            printed = printf_string(args, printed);
             break;
         case '%':
             _putchar('%');
             printed++;
             break;
         case 'b':
-            printed = print_binary(va_arg(args, unsigned int), printed);
+            printed = printf_binary(va_arg(args, unsigned int), printed);
             break;
         case 'x':
         case 'X':
-            printed = print_hex(va_arg(args, unsigned int), printed, (*format == 'X') ? 1 : 0);
+            printed = _x(va_arg(args, unsigned int), printed, (*format == 'X') ? 1 : 0);
             break;
         case 'o':
-            printed = print_octal(va_arg(args, unsigned int), printed);
+            printed = printf_octal(va_arg(args, unsigned int), printed);
             break;
         case 'u':
-            printed = print_unsigned(va_arg(args, unsigned int), printed);
+            printed = printf_unsigned(va_arg(args, unsigned int), printed);
             break;
         case 'r':
-            printed = print_reverse(args, printed);
+            printed = printf_reverse(args, printed);
             break;
         case 'p':
-            printed = print_pointer(args, printed);
+            printed = printf_pointer(args, printed);
             break;
         default:
             break;

@@ -35,3 +35,4 @@ int printf_binary(unsigned int num, int printed)
 
     return printed;
 }
+
