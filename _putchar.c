@@ -1,8 +1,15 @@
 #include "main.h"
+#include <unistd.h>
 
-
-int _putchar(char character)
+/**
+ * _putchar - Writes a character to the standard output
+ * @c: The character to be written
+ *
+ * Return: On success, returns the number of characters written (1).
+ * On error, returns -1.
+ */
+int _putchar(char c)
 {
-	return (write(1, &character, 1));
+    return write(1, &c, 1);
 }
 
